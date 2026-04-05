@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "slug": "convert-curl-to-axios",
+    "title": "How to Convert curl to Axios: A Step-by-Step Guide",
+    "problem_description": "Many developers find it challenging to convert curl commands to Axios requests, especially when dealing with complex headers and authentication.",
+    "how_to_solve": "Our tool automatically parses curl commands and generates clean, optimized Axios code. Simply paste your curl command, and we'll handle the rest. The generated code includes proper error handling and follows best practices.",
+    "code_example": "const axios = require('axios');\n\nasync function makeRequest() {\n  try {\n    const response = await axios({\n      method: 'GET',\n      url: 'https://api.example.com/data',\n      headers: {\n        'Authorization': 'Bearer YOUR_TOKEN',\n        'Content-Type': 'application/json'\n      },\n      params: {\n        limit: 10,\n        offset: 0\n      }\n    });\n    console.log(response.data);\n  } catch (error) {\n    console.error('Error:', error.message);\n  }\n}\n\nmakeRequest();"
+  },
+  {
+    "id": 2,
+    "slug": "javascript-date-formatting",
+    "title": "JavaScript Date Formatting: Best Practices for 2026",
+    "problem_description": "Formatting dates in JavaScript can be tricky, especially when dealing with different time zones and localization requirements.",
+    "how_to_solve": "Our tool provides a simple interface to format dates according to various standards, including ISO 8601, RFC 2822, and custom formats. It handles time zones automatically and supports multiple locales.",
+    "code_example": "// Using Intl.DateTimeFormat\nconst date = new Date();\nconst options = { year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit', timeZone: 'UTC' };\nconst formattedDate = new Intl.DateTimeFormat('en-US', options).format(date);\nconsole.log(formattedDate);\n\n// Using toISOString\nconst isoDate = date.toISOString();\nconsole.log(isoDate);"
+  },
+  {
+    "id": 3,
+    "slug": "react-optimization-techniques",
+    "title": "React Optimization Techniques for High-Performance Apps",
+    "problem_description": "React applications can become slow as they grow, especially with complex state management and frequent re-renders.",
+    "how_to_solve": "Our tool analyzes your React code and suggests optimization techniques like memoization, code splitting, and lazy loading. It provides actionable insights to improve your app's performance.",
+    "code_example": "import React, { memo, useMemo, useCallback } from 'react';\n\nconst ExpensiveComponent = memo(({ data }) => {\n  const processedData = useMemo(() => {\n    return data.map(item => item * 2);\n  }, [data]);\n\n  const handleClick = useCallback(() => {\n    console.log('Button clicked');\n  }, []);\n\n  return (\n    <div>\n      {processedData.map((item, index) => (\n        <div key={index}>{item}</div>\n      ))}\n      <button onClick={handleClick}>Click Me</button>\n    </div>\n  );\n});\n\nexport default ExpensiveComponent;"
+  },
+  {
+    "id": 4,
+    "slug": "nodejs-error-handling",
+    "title": "Node.js Error Handling: Best Practices for Production",
+    "problem_description": "Proper error handling in Node.js is crucial for building reliable applications, but many developers struggle with implementing it effectively.",
+    "how_to_solve": "Our tool helps you implement robust error handling strategies, including centralized error middleware, proper logging, and graceful shutdowns. It ensures your application can recover from unexpected errors without crashing.",
+    "code_example": "const express = require('express');\nconst app = express();\n\n// Error handling middleware\napp.use((err, req, res, next) => {\n  console.error(err.stack);\n  res.status(500).json({\n    error: 'Internal Server Error',\n    message: process.env.NODE_ENV === 'production' ? 'Something went wrong' : err.message\n  });\n});\n\n// Example route with error handling\napp.get('/api/data', async (req, res, next) => {\n  try {\n    const data = await fetchData();\n    res.json(data);\n  } catch (error) {\n    next(error);\n  }\n});\n\napp.listen(3000, () => console.log('Server running on port 3000'));"
+  },
+  {
+    "id": 5,
+    "slug": "css-grid-layout",
+    "title": "CSS Grid Layout: Mastering Modern Web Design",
+    "problem_description": "CSS Grid Layout is powerful but can be complex to master, especially for responsive designs that need to work across different screen sizes.",
+    "how_to_solve": "Our tool provides a visual interface to create and customize CSS Grid layouts. It generates clean, optimized code that works across all modern browsers, with fallbacks for older ones.",
+    "code_example": ".grid-container {\n  display: grid;\n  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));\n  grid-gap: 20px;\n  padding: 20px;\n}\n\n.grid-item {\n  background-color: #f9fafb;\n  border: 1px solid #e5e7eb;\n  padding: 20px;\n  border-radius: 4px;\n  transition: transform 0.2s ease-in-out;\n}\n\n.grid-item:hover {\n  transform: translateY(-2px);\n  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);\n}\n\n@media (max-width: 768px) {\n  .grid-container {\n    grid-template-columns: 1fr;\n  }\n}"
+  },
+  {
+    "id": 6,
+    "slug": "typescript-interfaces",
+    "title": "TypeScript Interfaces: Best Practices for Type Safety",
+    "problem_description": "Creating effective TypeScript interfaces can be challenging, especially when dealing with complex data structures and optional properties.",
+    "how_to_solve": "Our tool helps you generate TypeScript interfaces from JSON data or existing code. It ensures type safety while maintaining flexibility, with support for generics and conditional types.",
+    "code_example": "interface User {\n  id: number;\n  name: string;\n  email: string;\n  age?: number;\n  address: {\n    street: string;\n    city: string;\n    country: string;\n  };\n  roles: string[];\n}\n\ninterface Product {\n  id: string;\n  name: string;\n  price: number;\n  description?: string;\n  tags: string[];\n}\n\nfunction processUser(user: User): void {\n  console.log(`Processing user: ${user.name}`);\n}\n\nfunction processProduct(product: Product): void {\n  console.log(`Processing product: ${product.name}`);\n}"
+  },
+  {
+    "id": 7,
+    "slug": "git-branch-strategy",
+    "title": "Git Branch Strategy: Best Practices for Teams",
+    "problem_description": "Choosing the right Git branch strategy is crucial for team collaboration, but many teams struggle with maintaining a clean and efficient workflow.",
+    "how_to_solve": "Our tool helps you implement and enforce a consistent Git branch strategy, including feature branches, release branches, and hotfixes. It provides clear guidelines and automation tools to keep your repository organized.",
+    "code_example": "# Example Git workflow\n\n# Create a feature branch\ngit checkout -b feature/new-feature\n\n# Make changes and commit\ngit add .\ngit commit -m \"Implement new feature\"\n\n# Push to remote\ngit push origin feature/new-feature\n\n# Create a pull request\n# After review, merge to main\ngit checkout main\ngit pull origin main\ngit merge feature/new-feature\ngit push origin main\n\n# Delete the feature branch\ngit branch -d feature/new-feature\ngit push origin --delete feature/new-feature"
+  },
+  {
+    "id": 8,
+    "slug": "responsive-design-breakpoints",
+    "title": "Responsive Design Breakpoints: A Complete Guide",
+    "problem_description": "Setting up responsive design breakpoints can be challenging, especially when trying to cover all device sizes and orientations.",
+    "how_to_solve": "Our tool helps you define and test responsive design breakpoints across different devices. It provides a visual interface to preview your design at various screen sizes and generates optimized CSS media queries.",
+    "code_example": "/* Common breakpoints */\n/* Mobile-first approach */\n\n/* Base styles (mobile) */\n.container {\n  width: 100%;\n  padding: 0 16px;\n}\n\n/* Tablet */\n@media (min-width: 768px) {\n  .container {\n    padding: 0 24px;\n  }\n  \n  .grid {\n    display: grid;\n    grid-template-columns: repeat(2, 1fr);\n    gap: 20px;\n  }\n}\n\n/* Laptop */\n@media (min-width: 1024px) {\n  .container {\n    max-width: 960px;\n    margin: 0 auto;\n  }\n  \n  .grid {\n    grid-template-columns: repeat(3, 1fr);\n  }\n}\n\n/* Desktop */\n@media (min-width: 1280px) {\n  .container {\n    max-width: 1200px;\n  }\n  \n  .grid {\n    grid-template-columns: repeat(4, 1fr);\n  }\n}"
+  },
+  {
+    "id": 9,
+    "slug": "nodejs-performance-optimization",
+    "title": "Node.js Performance Optimization: Tips and Tricks",
+    "problem_description": "Node.js applications can suffer from performance issues under heavy load, especially when dealing with I/O operations and memory management.",
+    "how_to_solve": "Our tool analyzes your Node.js code and identifies performance bottlenecks. It provides specific recommendations to optimize your application, including proper caching, connection pooling, and memory management.",
+    "code_example": "const express = require('express');\nconst redis = require('redis');\nconst app = express();\n\n// Create Redis client for caching\nconst client = redis.createClient();\n\n// Example route with caching\napp.get('/api/data/:id', async (req, res) => {\n  const { id } = req.params;\n  \n  // Check cache first\n  const cachedData = await client.get(`data:${id}`);\n  if (cachedData) {\n    return res.json(JSON.parse(cachedData));\n  }\n  \n  // Fetch data from database\n  const data = await fetchDataFromDatabase(id);\n  \n  // Cache the result\n  await client.set(`data:${id}`, JSON.stringify(data), 'EX', 3600);\n  \n  res.json(data);\n});\n\napp.listen(3000, () => console.log('Server running on port 3000'));"
+  },
+  {
+    "id": 10,
+    "slug": "react-hooks-best-practices",
+    "title": "React Hooks Best Practices: Avoiding Common Mistakes",
+    "problem_description": "React Hooks are powerful but can be tricky to use correctly, leading to bugs and performance issues if not implemented properly.",
+    "how_to_solve": "Our tool helps you identify and fix common React Hooks mistakes, such as incorrect dependencies, stale closures, and unnecessary re-renders. It provides code examples and best practices to follow.",
+    "code_example": "import React, { useState, useEffect, useCallback, useMemo } from 'react';\n\nconst Counter = () => {\n  const [count, setCount] = useState(0);\n  const [title, setTitle] = useState('Counter');\n  \n  // Correct dependency array\n  useEffect(() => {\n    document.title = `${title}: ${count}`;\n  }, [count, title]);\n  \n  // Memoize expensive computation\n  const doubledCount = useMemo(() => {\n    console.log('Computing doubled count');\n    return count * 2;\n  }, [count]);\n  \n  // Memoize event handler\n  const handleIncrement = useCallback(() => {\n    setCount(prevCount => prevCount + 1);\n  }, []);\n  \n  return (\n    <div>\n      <h1>{title}</h1>\n      <p>Count: {count}</p>\n      <p>Doubled: {doubledCount}</p>\n      <button onClick={handleIncrement}>Increment</button>\n      <input \n        type='text' \n        value={title} \n        onChange={(e) => setTitle(e.target.value)} \n      />\n    </div>\n  );\n};\n\nexport default Counter;"
+  }
+]
