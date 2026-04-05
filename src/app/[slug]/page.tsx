@@ -10,10 +10,9 @@ interface Keyword {
   how_to_solve: string;
 }
 
+// 不生成静态参数，使用动态生成
 export async function generateStaticParams() {
-  return keywords.map((keyword: Keyword) => ({
-    slug: keyword.slug,
-  }));
+  return [];
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {

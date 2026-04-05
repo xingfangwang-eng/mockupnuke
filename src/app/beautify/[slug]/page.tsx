@@ -95,11 +95,9 @@ function generateRelatedSearches(keyword: string, count: number = 3) {
   return shuffled.slice(0, count).map((kw) => `${keyword} ${kw}`);
 }
 
-// 生成静态参数
+// 不生成静态参数，使用动态生成
 export async function generateStaticParams() {
-  return keywords.map((keyword: Keyword) => ({
-    slug: keyword.slug,
-  }));
+  return [];
 }
 
 // 生成元数据
