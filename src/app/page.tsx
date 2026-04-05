@@ -308,6 +308,28 @@ export default function Home() {
           </div>
         </div>
 
+        {/* Quick Access */}
+        <div className="mt-16 pt-8 border-t border-slate-200">
+          <h2 className="text-sm font-medium text-slate-500 mb-6 text-center">Quick Access</h2>
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
+            <a href="/solutions/make-app-screenshots-pro-twitter" className="text-xs text-slate-500 hover:text-slate-700 transition-colors">Professional Twitter Screenshots</a>
+            <a href="/solutions/canva-too-slow-for-mockups" className="text-xs text-slate-500 hover:text-slate-700 transition-colors">Fast Mockups</a>
+            <a href="/solutions/add-mac-browser-frame-online" className="text-xs text-slate-500 hover:text-slate-700 transition-colors">Mac Browser Frames</a>
+            <a href="/solutions/fix-blurry-linkedin-screenshots" className="text-xs text-slate-500 hover:text-slate-700 transition-colors">LinkedIn Optimization</a>
+            <a href="/solutions/fastest-screenshot-beautifier-product-hunt" className="text-xs text-slate-500 hover:text-slate-700 transition-colors">Product Hunt Ready</a>
+            <a href="/solutions/screenshot-to-mockup-one-click" className="text-xs text-slate-500 hover:text-slate-700 transition-colors">One-Click Mockups</a>
+            <a href="/solutions/cleanshot-alternative-for-windows" className="text-xs text-slate-500 hover:text-slate-700 transition-colors">Windows Alternative</a>
+            <a href="/solutions/website-screenshot-apple-style" className="text-xs text-slate-500 hover:text-slate-700 transition-colors">Apple Style</a>
+            <a href="/solutions/one-second-screenshot-wrapper-devs" className="text-xs text-slate-500 hover:text-slate-700 transition-colors">Developer Friendly</a>
+            <a href="/solutions/high-res-mockup-no-login" className="text-xs text-slate-500 hover:text-slate-700 transition-colors">No Login Required</a>
+            <a href="/solutions/convert-screen-capture-to-marketing-asset" className="text-xs text-slate-500 hover:text-slate-700 transition-colors">Marketing Assets</a>
+            <a href="/solutions/best-screenshot-tool-saas-landing-page" className="text-xs text-slate-500 hover:text-slate-700 transition-colors">SaaS Landing Pages</a>
+            <a href="/solutions/wrap-screenshot-aesthetic-frame" className="text-xs text-slate-500 hover:text-slate-700 transition-colors">Aesthetic Frames</a>
+            <a href="/solutions/screenshot-4k-gradient-background" className="text-xs text-slate-500 hover:text-slate-700 transition-colors">4K Gradients</a>
+            <a href="/solutions/add-pro-shadow-to-screenshot" className="text-xs text-slate-500 hover:text-slate-700 transition-colors">Professional Shadows</a>
+          </div>
+        </div>
+
         {/* Footer */}
         <div className="mt-12 text-center text-sm text-slate-400">
           <p>Made with ❤️ for beautiful screenshots</p>
